@@ -1,59 +1,295 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+diff --git a/README_LINKUP.md b/README_LINKUP.md
+deleted file mode 100644
+index 9f38c3b6a931933d80f6f1d78ea7833f2420c3dc..0000000000000000000000000000000000000000
+--- a/README_LINKUP.md
++++ /dev/null
+@@ -1,289 +0,0 @@
+-# LinkUp - Social Media Platform
+-
+-LinkUp is a modern, full-featured social media platform built with Laravel and Tailwind CSS. Connect, share, and engage with people around the world in a safe and intuitive environment.
+-
+-## Features
+-
+-### Core Features
+-- **User Profiles** - Customizable profiles with avatar support, bio, and follow system
+-- **Posts** - Share your thoughts and updates with real-time interactions
+-- **Comments** - Comment on posts without page reload using AJAX
+-- **Likes** - Quick like/unlike functionality with instant feedback
+-- **Follow System** - Follow users to see their content in your personalized feed
+-- **Messaging** - Direct messaging with real-time message indicators
+-- **Notifications** - Get notified about likes, comments, and follows
+-- **Search** - Discover users and content
+-- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+-
+-### Security Features
+-- Email verification
+-- CSRF protection
+-- XSS protection through input sanitization
+-- Rate limiting on sensitive actions
+-- Authorization policies for post and comment deletion
+-- Soft deletes for user data preservation
+-- Secure password hashing with bcrypt
+-
+-### Performance Features
+-- Database indexes for optimal query performance
+-- Eager loading relationships to prevent N+1 queries
+-- AJAX-based interactions for smooth user experience
+-- Optimized migrations and seeders
+-- Caching strategies for frequently accessed data
+-
+-## Installation
+-
+-### Requirements
+-- PHP 8.2+
+-- Composer
+-- Node.js & npm
+-- SQLite (default) or MySQL/PostgreSQL
+-
+-### Setup
+-
+-1. **Clone and navigate to the project**
+-   ```bash
+-   cd social-media
+-   ```
+-
+-2. **Install PHP dependencies**
+-   ```bash
+-   composer install
+-   ```
+-
+-3. **Install Node dependencies**
+-   ```bash
+-   npm install
+-   ```
+-
+-4. **Create environment file**
+-   ```bash
+-   cp .env.example .env
+-   ```
+-
+-5. **Generate application key**
+-   ```bash
+-   php artisan key:generate
+-   ```
+-
+-6. **Run migrations**
+-   ```bash
+-   php artisan migrate
+-   ```
+-
+-7. **Seed the database (optional)**
+-   ```bash
+-   php artisan db:seed
+-   ```
+-
+-8. **Build frontend assets**
+-   ```bash
+-   npm run build
+-   ```
+-
+-9. **Start development server**
+-   ```bash
+-   php artisan serve
+-   ```
+-
+-The application will be available at `http://localhost:8000`
+-
+-## Testing with Seeded Data
+-
+-The database seeder creates 30 test users with diverse names (Arabic, English, French). You can login with any user email using:
+-- **Email**: Use any user's email from the seeded data (formatted as firstname.lastname@linkup.com)
+-- **Password**: `password`
+-
+-Example:
+-- Email: `ahmed.al-mansouri@linkup.com`
+-- Password: `password`
+-
+-## Development Commands
+-
+-### Local Development
+-```bash
+-# Start development server with file watching
+-composer run dev
+-```
+-
+-### Run Tests
+-```bash
+-composer run test
+-```
+-
+-### Build Production Assets
+-```bash
+-npm run build
+-```
+-
+-### Format Code
+-```bash
+-composer run format
+-```
+-
+-## Project Structure
+-
+-```
+-social-media/
+-├── app/
+-│   ├── Http/
+-│   │   ├── Controllers/     # Application controllers
+-│   │   ├── Requests/        # Form request validation
+-│   │   └── Middleware/      # Custom middleware
+-│   ├── Models/              # Eloquent models
+-│   ├── Policies/            # Authorization policies
+-│   └── Providers/           # Service providers
+-├── database/
+-│   ├── migrations/          # Database migrations
+-│   ├── seeders/             # Database seeders
+-│   └── factories/           # Model factories for testing
+-├── resources/
+-│   ├── css/                 # Tailwind CSS
+-│   ├── js/                  # Frontend JavaScript
+-│   └── views/               # Blade templates
+-├── routes/
+-│   ├── web.php              # Web routes
+-│   ├── auth.php             # Authentication routes
+-│   └── console.php          # Console commands
+-└── tests/                   # Test suites
+-```
+-
+-## API Endpoints
+-
+-### Authentication
+-- `POST /register` - Register new account
+-- `POST /login` - Login
+-- `POST /logout` - Logout
+-
+-### Feed
+-- `GET /feed` - Get user feed
+-- `GET /search` - Search users
+-
+-### Posts
+-- `POST /posts` - Create post
+-- `DELETE /posts/{post}` - Delete post
+-
+-### Comments
+-- `POST /posts/{post}/comments` - Add comment
+-- `DELETE /comments/{comment}` - Delete comment
+-
+-### Likes
+-- `POST /posts/{post}/like` - Toggle like
+-
+-### Follow
+-- `POST /users/{user}/follow` - Toggle follow
+-
+-### Profile
+-- `GET /users/{user}` - View profile
+-- `GET /profile/edit` - Edit profile
+-- `PUT /profile` - Update profile
+-- `DELETE /profile` - Delete account
+-
+-### Notifications
+-- `GET /notifications` - Get notifications
+-- `POST /notifications/{notification}/read` - Mark as read
+-- `POST /notifications/read-all` - Mark all as read
+-
+-### Messages
+-- `GET /messages` - Inbox
+-- `GET /messages/{user}` - Conversation with user
+-- `POST /messages/{conversation}` - Send message
+-
+-## Database Schema
+-
+-### Key Tables
+-- `users` - User accounts with soft deletes
+-- `posts` - User posts with timestamps
+-- `comments` - Post comments with relationships
+-- `likes` - User likes on posts (unique constraint)
+-- `follows` - User follow relationships (unique constraint)
+-- `notifications` - User notifications with read status
+-- `messages` - Direct messages between users
+-- `conversations` - Conversation threads
+-
+-### Indexes
+-All tables include optimized indexes on:
+-- Foreign keys
+-- Timestamps and frequently queried columns
+-- Composite indexes for common query patterns
+-
+-## Security Considerations
+-
+-1. **Input Validation** - All user input is validated using Laravel's robust validation system
+-2. **XSS Protection** - Content is sanitized to remove dangerous HTML
+-3. **CSRF Protection** - All forms include CSRF tokens
+-4. **Authorization** - Policies ensure users can only modify their own content
+-5. **Rate Limiting** - Sensitive actions are rate-limited to prevent abuse:
+-   - 30 posts per hour
+-   - 100 likes per hour
+-   - 50 follows per hour
+-6. **Data Privacy** - Soft deletes preserve user data even after account deletion
+-
+-## Performance Optimization
+-
+-1. **Database Indexes** - Comprehensive indexing for fast queries
+-2. **Eager Loading** - Related data loaded efficiently with Eloquent relationships
+-3. **AJAX Interactions** - Comments and likes update without full page reloads
+-4. **Caching** - Query results cached where appropriate
+-5. **Asset Minification** - CSS and JavaScript optimized for production
+-
+-## Deployment
+-
+-### Production Checklist
+-- [ ] Set `APP_ENV=production` in `.env`
+-- [ ] Set `APP_DEBUG=false` in `.env`
+-- [ ] Update `APP_URL` to production domain
+-- [ ] Configure mail credentials
+-- [ ] Set secure session configuration
+-- [ ] Enable HTTPS
+-- [ ] Configure backup strategy
+-- [ ] Set up monitoring and logging
+-
+-### Environment Variables
+-Key `.env` variables for production:
+-```
+-APP_NAME=LinkUp
+-APP_ENV=production
+-APP_DEBUG=false
+-APP_URL=https://yourdomain.com
+-
+-DB_CONNECTION=mysql
+-DB_HOST=your_db_host
+-DB_DATABASE=your_db_name
+-DB_USERNAME=your_db_user
+-DB_PASSWORD=your_db_password
+-
+-MAIL_MAILER=smtp
+-MAIL_HOST=your_mail_host
+-MAIL_PORT=587
+-MAIL_USERNAME=your_email
+-MAIL_PASSWORD=your_email_password
+-```
+-
+-## Contributing
+-
+-We welcome contributions! To contribute:
+-
+-1. Fork the repository
+-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+-3. Commit changes (`git commit -m 'Add amazing feature'`)
+-4. Push to branch (`git push origin feature/amazing-feature`)
+-5. Open a Pull Request
+-
+-## License
+-
+-This project is open-sourced software licensed under the MIT license.
+-
+-## Support
+-
+-For issues, questions, or suggestions, please open an issue in the repository or contact the development team.
+-
+-## Changelog
+-
+-### Version 1.0.0 - Initial Release
+-- Core social media features
+-- Real-time AJAX interactions
+-- Comprehensive authorization system
+-- Complete test suite
+-- Database optimization
+-- Security hardening
