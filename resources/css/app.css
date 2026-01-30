@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: #007BFF;
+        --color-secondary: #FF6B6B;
+        --color-accent: #00C897;
+        --color-dark: #0A192F;
+        --color-light: #FFFFFF;
+    }
+    
+    body {
+        @apply font-sans antialiased;
+    }
+    
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@layer components {
+    /* Button Styles */
+    .btn {
+        @apply px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+    
+    .btn-primary {
+        @apply btn bg-primary text-white hover:bg-primary-600 focus:ring-primary shadow-md hover:shadow-lg;
+    }
+    
+    .btn-secondary {
+        @apply btn bg-secondary text-white hover:bg-secondary-600 focus:ring-secondary shadow-md hover:shadow-lg;
+    }
+    
+    .btn-accent {
+        @apply btn bg-accent text-white hover:bg-accent-600 focus:ring-accent shadow-md hover:shadow-lg;
+    }
+    
+    .btn-outline {
+        @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+    }
+    
+    .btn-ghost {
+        @apply btn text-gray-700 hover:bg-gray-100 focus:ring-gray-300;
+    }
+    
+    /* Input Styles */
+    .input {
+        @apply w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-white;
+    }
+    
+    .input-error {
+        @apply border-secondary focus:ring-secondary;
+    }
+    
+    /* Card Styles */
+    .card {
+        @apply bg-white rounded-2xl shadow-soft p-6 transition-all duration-200;
+    }
+    
+    .card-hover {
+        @apply card hover:shadow-medium hover:-translate-y-1;
+    }
+    
+    /* Link Styles */
+    .link {
+        @apply text-primary hover:text-primary-600 font-medium transition-colors duration-200;
+    }
+    
+    /* Badge Styles */
+    .badge {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+    }
+    
+    .badge-primary {
+        @apply badge bg-primary-100 text-primary-700;
+    }
+    
+    .badge-secondary {
+        @apply badge bg-secondary-100 text-secondary-700;
+    }
+    
+    .badge-accent {
+        @apply badge bg-accent-100 text-accent-700;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    }
+}
