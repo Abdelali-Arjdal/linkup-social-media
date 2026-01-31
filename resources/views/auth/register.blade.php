@@ -1,5 +1,9 @@
 <x-guest-layout>
     <div class="space-y-6">
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <img src="{{ asset('images/linkup-logo.png') }}" alt="LinkUp Logo" class="h-16 w-auto mb-2" onerror="this.style.display='none'">
+        </div>
         <!-- Header -->
         <div class="text-center">
             <h2 class="text-3xl font-bold text-gray-900">Create Account</h2>
