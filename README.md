@@ -167,11 +167,8 @@ Or register a new account at the signup page.
 
 For detailed documentation, please see:
 
-- **[README_LINKUP.md](README_LINKUP.md)** — Complete project documentation
-- **[QUICKSTART.md](QUICKSTART.md)** — Quick setup guide
 - **[API_DOCUMENTATION.md](API_DOCUMENTATION.md)** — API endpoints
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Contribution guidelines
-- **[PRE_PUSH_CHECKLIST.md](PRE_PUSH_CHECKLIST.md)** — Quality assurance checklist
 
 ---
 
